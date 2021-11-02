@@ -26,6 +26,7 @@ export class NegociacoesView extends View<Negociacoes> {
                     }
                 </tbody>
             </table>
+            <script>alert("oi")</script>
         `
     }
 
