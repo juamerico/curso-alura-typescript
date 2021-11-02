@@ -3,7 +3,12 @@ export abstract class View<T> {
     private escapar = false
 
     constructor(seletor: string, escapar?: boolean) {
-        this.elemento = document.querySelector(seletor)
+        const seletorElemento = document.querySelector(seletor) as HTMLInputElement
+        if(seletorElemento) {
+            this.elemento = seletorElemento
+        } else {
+            throw Error(`Seletor ${seletor} não encontrado. Verifique.`)
+        }
 
         if(escapar) {
             this.escapar = escapar

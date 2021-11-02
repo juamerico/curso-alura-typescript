@@ -20,8 +20,6 @@ export class NegociacaoController {
             return;
         }
         this.negociacoes.adiciona(negociacao);
-        //consegue setar (sem ser atribuição com sinal de igual) um novo valor no getter, a menos que crie uma "cópia" do objeto literal
-        //negociacao.data.setDate(10)
         this.limparFormulario();
         this.atualizaView();
     }
